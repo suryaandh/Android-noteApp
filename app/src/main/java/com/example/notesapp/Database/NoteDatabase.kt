@@ -8,7 +8,7 @@ import com.example.notesapp.Models.Note
 import com.example.notesapp.Utilities.DATABASE_NAME
 
 @Database(entities = arrayOf(Note::class), version = 1, exportSchema = false)
-class NoteDatabase {
+abstract class NoteDatabase : RoomDatabase(){
 
     abstract fun getNoteDao() :NoteDao
 
